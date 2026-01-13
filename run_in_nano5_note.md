@@ -46,8 +46,7 @@ https://github.com/NVIDIA/makani
 
 ```bash
 git clone https://github.com/NVIDIA/makani.git
-cd makani
-pip install -e .
+pip install -e ./makani/
 ```
 
 Install additional Python packages:
