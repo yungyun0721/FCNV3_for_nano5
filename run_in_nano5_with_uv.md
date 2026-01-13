@@ -19,6 +19,14 @@ source ~/.bashrc
 
 ---
 
+## Download this repository 
+
+```bash
+cd /work/<username>/
+git clone https://github.com/yungyun0721/FCNV3_for_nano5.git
+cd FCNV3_for_nano5
+```
+
 ## Build the Environment
 
 ### Step 1 — Create a virtual environment

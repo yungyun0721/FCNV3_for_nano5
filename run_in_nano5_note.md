@@ -6,6 +6,14 @@ and run inference jobs.
 
 ---
 
+## Download this repository 
+
+```bash
+cd /work/<username>/
+git clone https://github.com/yungyun0721/FCNV3_for_nano5.git
+cd FCNV3_for_nano5
+```
+
 ## Build the Environment with Conda
 
 ### Step 1 — Create the conda environment
@@ -63,7 +71,14 @@ print("torch cuda:", torch.version.cuda)
 print("cuda available:", torch.cuda.is_available())
 EOF
 ```
+### Install PyTorch manually (if not installed)
 
+Refer to: https://pytorch.org/get-started/previous-versions/
+
+```bash
+pip install torch==2.9.0 torchvision==0.24.0 torchaudio==2.9.0 \
+  --index-url https://download.pytorch.org/whl/cu126
+```
 ---
 
 ## Build `torch-harmonics` (CUDA extension)
