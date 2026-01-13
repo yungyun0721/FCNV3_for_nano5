@@ -39,7 +39,7 @@ Follow the instructions in:
 run_in_nano5_note.md
 ```
 
-### 2. uv-based environment setup (recommended for lightweight environments)
+### 2. uv-based environment setup 
 
 Follow the instructions in:
 
