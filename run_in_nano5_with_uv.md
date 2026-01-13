@@ -1,4 +1,4 @@
-## using the uv to build the environment
+## using the uv to build the environment to running the FCNV3
 ### step: download uv and add in .bashrc
 ```
 curl -LsSf https://astral.sh/uv/install.sh | sh
