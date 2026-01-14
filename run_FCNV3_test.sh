@@ -25,7 +25,10 @@ unset CFLAGS CXXFLAGS CPPFLAGS
 export FORCE_CUDA_EXTENSION=1
 export TORCH_CUDA_ARCH_LIST="9.0"   # H100 = SM90
 
-###python download_history_ncep.py --scheduled-time 2025091800
+# Run download data
+python download_history_ncep.py --scheduled-time 2025091800
+
+# Run determine FCNV3 run
 python FCNV3_inference.py \
 	--input_data input_data/ncep_initial_condition.npy \
 	--input_time 2025091800 \
@@ -38,6 +41,10 @@ python FCNV3_inference.py \
 #        	--ens_mem 5\
 #        	--output_folder output_FCNV3_2025091800_ens \
 # 	--fore_hr 96
+
+# python plot850.py \
+#   -f output_FCNV3_2025091800 \
+#   -o plot_2025091800
 
 echo "Finshing..."
 date
