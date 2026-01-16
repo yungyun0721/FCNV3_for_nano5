@@ -68,7 +68,7 @@ def main(FCNV3_folder,save_figure):
         plt.ylim([0,50])
         plt.colorbar(contourf)
         plt.title(f'+{i*6} hour, 850 mb Wind Speed')
-        plt.savefig(f'{save_figure}new_predict_{(i*6):0>3}.png',dpi=200)
+        plt.savefig(os.path.join(save_figure,f'new_predict_{(i*6):0>3}.png'),dpi=200)
         plt.close()
 
 if __name__ == "__main__":
