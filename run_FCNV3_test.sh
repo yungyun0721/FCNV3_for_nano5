@@ -33,13 +33,13 @@ python FCNV3_inference.py \
 	--input_data input_data/ncep_initial_condition.npy \
 	--input_time 2025091800 \
 	--output_folder output_FCNV3_2025091800\
-      	--fore_hr 96
+    --fore_hr 96
 
 # python FCNV3_inference_ens.py \
 # 	--input_data input_data/ncep_initial_condition.npy\
-#        	--input_time 2025091800\
-#        	--ens_mem 5\
-#        	--output_folder output_FCNV3_2025091800_ens \
+#   --input_time 2025091800\
+#   --ens_mem 5\
+#   --output_folder output_FCNV3_2025091800_ens \
 # 	--fore_hr 96
 
 # python plot850.py \

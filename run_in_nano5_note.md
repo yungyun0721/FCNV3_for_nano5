@@ -188,6 +188,7 @@ Run ensemble inference:
 python FCNV3_inference_ens.py \
   --input_data input_data/ncep_initial_condition.npy \
   --input_time 2025091800 \
+  --ens_mem 5\
   --output_folder output_FCNV3_2025091800_ens \
   --fore_hr 72
 ```
