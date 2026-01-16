@@ -20,7 +20,7 @@ ml list
 
 export CC=/work/HPC_software/LMOD/gcc/11/bin/gcc
 export CXX=/work/HPC_software/LMOD/gcc/11/bin/g++
-export CUDA_HOME=$(dirname $(dirname $(which nvcc)))   # 會指到 .../cuda-12.4
+export CUDA_HOME=$(dirname $(dirname $(which nvcc)))   # 會指到 .../cuda-12.6
 unset CFLAGS CXXFLAGS CPPFLAGS
 export FORCE_CUDA_EXTENSION=1
 export TORCH_CUDA_ARCH_LIST="9.0"   # H100 = SM90

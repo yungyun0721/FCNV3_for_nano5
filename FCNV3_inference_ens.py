@@ -32,6 +32,7 @@ def main(IC_data_path, IC_time_str, ens_mem, save_path, FCNV3_weight='FCNV3_weig
     total_step = np.int_(np.int_(fore_hr)/6) 
     
     # Get the noise state for the batch index
+    model.model.preprocessor.update_internal_state(replace_state=True)
     noise_state = model.model.preprocessor.get_internal_state(tensor=True)
     print('-----------------------')
     print(f'Looping ensemble member:{ens_i}...')
