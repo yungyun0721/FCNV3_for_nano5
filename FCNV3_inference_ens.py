@@ -3,7 +3,7 @@ import torch
 import numpy as np
 from makani.makani.models.model_package import LocalPackage, load_model_package
 from datetime import datetime, timedelta, timezone
-from FCNV3_ens_perturbation_tool import SphericalGaussian
+from FCNV3_ens_perturbation_tool import SphericalGaussian, Zero
 
 def main(IC_data_path, IC_time_str, ens_mem, save_path, FCNV3_weight='FCNV3_weight', fore_hr=60, device="cuda:0"):
   # device that we want to use
@@ -27,7 +27,8 @@ def main(IC_data_path, IC_time_str, ens_mem, save_path, FCNV3_weight='FCNV3_weig
     input_data = torch.tensor(IC_data[None,...]).to(device)
     # normalize the input now to avoid jumping back and forthabs
     input_data = (input_data - model.in_bias)/model.in_scale
-    perturbation = SphericalGaussian(noise_amplitude=0.15)
+    # perturbation = SphericalGaussian(noise_amplitude=0.15)
+    perturbation = Zero()
     input_data = perturbation(input_data)
     total_step = np.int_(np.int_(fore_hr)/6) 
     

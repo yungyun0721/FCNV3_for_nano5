@@ -220,3 +220,30 @@ class SphericalGaussian:
 
         noise_amplitude = self.noise_amplitude.to(x.device)
         return x + noise_amplitude * noise
+
+class Zero:
+    """No perturbation scheme
+
+    Primarily used for deterministic runs in ensemble workflows
+    """
+
+    @torch.inference_mode()
+    def __call__(
+        self,
+        x: torch.Tensor,
+    ) -> tuple[torch.Tensor]:
+        """Apply perturbation method
+
+        Parameters
+        ----------
+        x : torch.Tensor
+            Input tensor intended to apply perturbation on
+        coords : CoordSystem
+            Ordered dict representing coordinate system that describes the tensor
+
+        Returns
+        -------
+        tuple[torch.Tensor, CoordSystem]:
+            Output tensor and respective coordinate system dictionary
+        """
+        return x
