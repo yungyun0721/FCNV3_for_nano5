@@ -12,6 +12,8 @@ def main(IC_data_path, IC_time_str, ens_mem, save_path, FCNV3_weight='FCNV3_weig
   # directory where the model package resides
   model_package_dir = FCNV3_weight
   model = load_model_package(LocalPackage(model_package_dir)).to(device)
+  # change the seed num to get different perturbation
+  model.model.preprocessor.set_rng(reset=True, seed=10)
   
   
   # input setting
